@@ -12,8 +12,6 @@ router.post('/', [
   check('weekday', 'Choose a weekday').optional(),
   check('email', 'Your email is not valid').not().isEmpty(),
   check('password', 'Your password must be at least 5 characters').not().isEmpty(),
-  check('name').exists().isLength({min: 5}).trim().escape().withMessage('Name must have more than 5 characters'),
-  check('confirmPassword', 'Passwords do not match').custom((value, {req}) => (value === req.body.password)),
 ],
 function (req, res) {
   const errors = validationResult(req);
