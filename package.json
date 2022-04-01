@@ -10,7 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
+    "express-validator": "^6.14.0",
     "expressjs": "^1.0.1",
-    "pug": "^2.0.3"
+    "mustache-express": "^1.3.2",
+    "pug": "^2.0.4"
   }
 }

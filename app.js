@@ -12,7 +12,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+const mustache = require('mustache-express');
+app.engine('mustache', mustache());
+app.set('view engine', 'mustache');
 
 //Mount routers
 app.use('/', indexRouter);
